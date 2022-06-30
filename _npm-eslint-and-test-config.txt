@@ -1,0 +1,46 @@
+PACKAGE INSTALLATION
+npm install deep-equal
+npm install --save-dev eslint
+
+npm install --save-dev mocha
+npm install --save-dev wish
+
+npm install --save-dev tape
+npm install --save-dev testdouble
+
+ESLINT CONFIGURATION
+npm init @eslint/config
+> To check syntax, find problemsn and enforce code style
+> CommonJS (require/exports)
+> None of these
+> No
+> Browser and Node <a>
+> Use a popular style guide
+> Standard: https://github.com/standard/standard
+> JSON
+> Yes
+> npm
+
+ESLINT RULES (in .eslintrc.json)
+"rules": {
+  "semi": ["error", "always"],
+  "quotes": ["error", "double", { "allowTemplateLiterals": true }],
+  "array-element-newline":["error", {"minItems": 4}]
+}
+
+ESLINT INCLUDES MOCHA COMMANDS
+/* eslint-env mocha */      to be added in the test.js file to let eslint recognise mocha commands
+
+MOCHA RUN COMMAND
+npx mocha test.js           to run the test file given its relative path
+npx mocha                   to run these tests from the project directory
+npx mocha -w                once to run these tests from the project directory each time there is a change in the code
+
+CODE SETUP
+Rename file 'class.js' and 'class_test.js'
+Rename and populate class in the former 'class.js'
+Rename class import to Class from file './class.js' in the former 'class_test.js'
+Rename the filename 'class.js' in the description of the test set
+Rename the equality test value for the filename 'class_test.js'
+Rename the class in the console logging statement
+Replace the console logging statement by additional tests
